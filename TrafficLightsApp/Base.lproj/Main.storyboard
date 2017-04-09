@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLightsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Road" translatesAutoresizingMaskIntoConstraints="NO" id="g8z-nI-Aek"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TrafficLight" translatesAutoresizingMaskIntoConstraints="NO" id="Znb-0f-3GT">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Znb-0f-3GT" secondAttribute="height" multiplier="343:328" id="twG-A4-gqj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pa-f1-K36">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Pa-f1-K36" secondAttribute="height" multiplier="1:1" id="Z6q-JO-ePr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Start" backgroundImage="redButton">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1u-Zl-3N6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjt-da-Pmo">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="49"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g8z-nI-Aek" secondAttribute="trailing" id="3Tk-GZ-orf"/>
+                            <constraint firstItem="g8z-nI-Aek" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="85Q-CN-RO3"/>
+                            <constraint firstItem="yjt-da-Pmo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8wE-rh-O1H"/>
+                            <constraint firstItem="Znb-0f-3GT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EGZ-2x-V78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Pa-f1-K36" secondAttribute="trailing" constant="78" id="ISn-WT-Chv"/>
+                            <constraint firstItem="5Pa-f1-K36" firstAttribute="top" secondItem="yjt-da-Pmo" secondAttribute="bottom" constant="8" id="V9w-KD-DcI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Pa-f1-K36" secondAttribute="bottom" constant="8" id="esJ-D2-ga0"/>
+                            <constraint firstItem="Znb-0f-3GT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hMB-7Z-qDD"/>
+                            <constraint firstItem="yjt-da-Pmo" firstAttribute="top" secondItem="Znb-0f-3GT" secondAttribute="bottom" constant="8" id="iVh-NF-359"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g8z-nI-Aek" secondAttribute="bottom" id="kFi-hu-EJm"/>
+                            <constraint firstItem="Znb-0f-3GT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="spa-OM-LwC"/>
+                            <constraint firstItem="g8z-nI-Aek" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tnB-oF-8oA"/>
+                            <constraint firstItem="yjt-da-Pmo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vcc-0N-vKY"/>
+                            <constraint firstItem="5Pa-f1-K36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="78" id="yaF-6x-uhr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="yjt-da-Pmo" id="A58-fh-2mD"/>
+                        <outlet property="startStopButton" destination="5Pa-f1-K36" id="Ttk-jN-4YW"/>
+                        <outlet property="trafficLight" destination="Znb-0f-3GT" id="gd3-eD-2CT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Road" width="1674" height="1902"/>
+        <image name="TrafficLight" width="550" height="900"/>
+        <image name="redButton" width="1353" height="1353"/>
+    </resources>
+</document>
